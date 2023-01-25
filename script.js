@@ -1,0 +1,12 @@
+"use strict";
+let money = +prompt("Ваш бюджет на месяц?");
+let time = +prompt("Введите дату в формате YYYY-MM-DD");
+let appData = { budget: money, timeData: time, expenses: {}, optionalExpenses: {}, income: [], savings: true };
+let sectionExpenseOne = prompt("Введите обязательную статью расходов в этом месяце");
+let howMuchExpenseOne = +prompt("Во сколько это обойдётся");
+let sectionExpenseTwo = prompt("Введите обязательную статью расходов в этом месяце");
+let howMuchExpenseTwo = +prompt("Во сколько это обойдётся");
+appData.expenses.sectionExpenseOne = howMuchExpenseOne;
+appData.expenses.sectionExpenseTwo = howMuchExpenseTwo;
+console.log(appData);
+alert(appData.budget / 30);
